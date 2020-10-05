@@ -22,12 +22,13 @@ switch(choix)
         goto menuprincipal; //retour au menu principal
 
     case 2:
-
+        debut:
         printf("Quel montant voulez vous retirer?\n");
         scanf("%f",&montantr);
         if(montantr>solde) //si le montant est supérieur au solde
         {
             printf("Solde insuffisant\n");
+            goto debut;
         }
         else
         {
